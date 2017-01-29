@@ -72,6 +72,7 @@ public final class QueryUtils {
             if(urlConnection.getResponseCode()==200){
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
+                Log.v("Connected to internet?","Yes,fetching data");
             } else {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
